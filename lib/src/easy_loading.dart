@@ -375,6 +375,7 @@ class EasyLoading {
     EasyLoadingMaskType? maskType,
     bool? dismissOnTap,
   }) {
+
     return _instance._show(
       status: status,
       duration: duration ?? EasyLoadingTheme.displayDuration,
@@ -425,6 +426,8 @@ class EasyLoading {
       overlayEntry != null,
       'You should call EasyLoading.init() in your MaterialApp',
     );
+
+    if (w == null && status == null) return;
 
     if (loadingStyle == EasyLoadingStyle.custom) {
       assert(
