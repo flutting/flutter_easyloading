@@ -427,7 +427,7 @@ class EasyLoading {
       'You should call EasyLoading.init() in your MaterialApp',
     );
 
-    if (w == null && (status == null || status.length < 1)) return;
+    if (w == null && (status == null || status.isEmpty)) return;
 
     if (loadingStyle == EasyLoadingStyle.custom) {
       assert(
