@@ -331,7 +331,7 @@ class EasyLoading {
     bool? dismissOnTap,
   }) {
     if (status.isEmpty) {
-      return;
+      return Completer().future;
     }
     Widget w = _instance.errorWidget ??
         Icon(
