@@ -330,6 +330,9 @@ class EasyLoading {
     EasyLoadingMaskType? maskType,
     bool? dismissOnTap,
   }) {
+    if (status.isEmpty) {
+      return;
+    }
     Widget w = _instance.errorWidget ??
         Icon(
           Icons.clear,
